@@ -1,0 +1,611 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight: normal;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Gordita Regular";
+    font-size: 17px;
+    color: #0b0a0a;
+    overflow-x: hidden;
+    min-width: 320px;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Gordita Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/gordita/Gordita Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gordita Thin";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/gordita/Gordita Thin.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gordita Light";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/gordita/Gordita Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gordita Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/gordita/Gordita Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gordita Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/gordita/Gordita Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gordita Ultra";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/gordita/Gordita Ultra.woff") format("woff");
+}
+
+input,
+textarea,
+select {
+    font-family: "Gordita Regular";
+    font-weight: 500;
+}
+
+a {
+    color: #0b0a0a;
+}
+
+p {
+    line-height: 1.6em;
+    font-size: 16px;
+    font-family: "Gordita Regular";
+    font-weight: 500;
+    color: #0b0a0a;
+}
+
+.hidden {
+    display: none;
+}
+
+br.clear {
+    clear: both;
+    line-height: 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-size: 94px;
+}
+
+h2 {
+    font-size: 74px;
+}
+
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 20px;
+}
+h5 {
+    font-size: 18px;
+}
+h6 {
+    font-size: 12px;
+}
+
+.no_margin {
+    margin-right: 0 !important;
+}
+
+// --------------------------------------------------default style ends--------------------------------------------------------------------------------------
+
+header {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        width: 150px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 70px;
+        a {
+            font-family: "Gordita Medium";
+            color: #898989;
+            &.active {
+                color: #1e1e1e;
+            }
+            &:hover {
+                color: #1e1e1e;
+            }
+        }
+    }
+    div.login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        a.register {
+            font-family: "Gordita Medium";
+            color: #1f6bff;
+        }
+        a.login-button {
+            font-family: "Gordita Medium";
+            color: #fff;
+            background: #1f6bff;
+            padding: 12px 20px;
+            border-radius: 8px;
+        }
+    }
+}
+
+// --------------------------------------------------header style ends--------------------------------------------------------------------------------------
+
+#spotlight {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    div.spotlight-left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        h6 {
+            text-transform: uppercase;
+            font-family: "Gordita Medium";
+            font-size: 16px;
+            color: #fe9a52;
+        }
+        h3 {
+            font-size: 70px;
+            font-family: "Gordita Medium";
+        }
+        p {
+            color: #898989;
+        }
+        div.input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #e6e6e694;
+            padding: 5px 5px 5px 15px;
+            border-radius: 10px;
+            div.input {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                padding-top: 5px;
+                label {
+                    color: #898989;
+                    font-size: 13px;
+                }
+                input {
+                    font-size: 22px;
+                    font-family: "Gordita Medium";
+                }
+            }
+            a {
+                font-family: "Gordita Medium";
+                color: #fff;
+                background: #1f6bff;
+                padding: 15px 30px;
+                border-radius: 8px;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            li {
+                width: 75px;
+            }
+        }
+    }
+    div.spotlight-right {
+        width: 45%;
+        padding-bottom: 50px;
+    }
+}
+
+// --------------------------------------------------#spotlight style ends--------------------------------------------------------------------------------------
+
+#product {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-bottom: 100px;
+    div.top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        h6 {
+            text-transform: uppercase;
+            font-family: "Gordita Medium";
+            font-size: 16px;
+            color: #fe9a52;
+        }
+        h3 {
+            font-size: 50px;
+            font-family: "Gordita Medium";
+        }
+        ul.top-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            li.detail {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                &:first-child {
+                    div.detail-top {
+                        padding: 20px;
+                    }
+                }
+                &:nth-child(2) {
+                    div.detail-top {
+                        padding: 0px;
+                    }
+                }
+                &:last-child {
+                    div.detail-top {
+                        padding: 40px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 15px;
+                        margin: 0 auto;
+                        div.detail-top-image {
+                            background: #fff;
+                            padding: 25px;
+                            border-radius: 10px;
+                            width: 100%;
+                        }
+                    }
+                }
+                div.detail-top {
+                    background: #e6e6e694;
+                    width: 300px;
+                    height: 300px;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    border-radius: 25px;
+                    div.detail-top-image {
+                        width: 75%;
+                    }
+                }
+                div.detail-bottom {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    h4 {
+                        font-size: 28px;
+                        font-family: "Gordita Medium";
+                    }
+                    p {
+                        font-family: "Gordita Medium";
+                        font-size: 18px;
+                        color: #898989;
+                    }
+                }
+            }
+        }
+    }
+    div.middle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        div.middle-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 30px;
+            width: 45%;
+            h3 {
+                font-family: "Gordita Medium";
+                font-size: 50px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                li {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #898989;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 10px;
+                    div.texts {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        h5 {
+                            font-size: 22px;
+                        }
+                        p {
+                            font-family: "Gordita Medium";
+                            font-size: 13px;
+                            color: #898989;
+                        }
+                        div.button-container {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 10px;
+                            a {
+                                font-family: "Gordita Medium";
+                                font-size: 16px;
+                                color: #fe9a52;
+                            }
+                            div.arrow {
+                                width: 20px;
+                            }
+                        }
+                    }
+                    div.arrow-icon {
+                        padding-top: 5px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+        div.middle-right {
+            width: 55%;
+        }
+    }
+    div.bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 80px;
+        position: relative;
+        div.bottom-left {
+            background: #1f6bff;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            width: 40%;
+            height: 500px;
+            div.bottom-left-image {
+                width: 450px;
+                position: absolute;
+                top: -65px;
+                left: 55px;
+            }
+        }
+        div.bottom-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h6 {
+                text-transform: uppercase;
+                font-family: "Gordita Medium";
+                font-size: 16px;
+                color: #fe9a52;
+            }
+            h3 {
+                font-size: 50px;
+                font-family: "Gordita Medium";
+            }
+            p {
+                font-family: "Gordita Medium";
+                font-size: 15px;
+                color: #898989;
+                margin-bottom: 30px;
+            }
+            div.image-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 50px;
+                div.image {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------------------------#product style ends--------------------------------------------------------------------------------------
+
+#testimonials {
+    background: #e6e6e694;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    h6 {
+        text-transform: uppercase;
+        font-family: "Gordita Medium";
+        font-size: 16px;
+        color: #fe9a52;
+    }
+    h3 {
+        font-size: 50px;
+        font-family: "Gordita Medium";
+    }
+    p {
+        font-family: "Gordita Medium";
+        font-size: 16px;
+        color: #898989;
+        text-align: center;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        width: 100%;
+        li {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 25%;
+            div.brand {
+                width: 100px;
+            }
+            p {
+                font-family: "Gordita Medium";
+                font-size: 14px;
+                color: #898989;
+                text-align: left;
+            }
+            div.author {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 15px;
+                div.author-image {
+                    width: 60px;
+                    img {
+                        border-radius: 50px;
+                    }
+                }
+                div.author-name {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 5px;
+                    h5 {
+                        font-family: "Gordita Medium";
+                        font-size: 16px;
+                    }
+                    h6 {
+                        font-family: "Gordita Medium";
+                        font-size: 10px;
+                        color: #898989;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------------------------#testimonials style ends--------------------------------------------------------------------------------------
+
+footer {
+    background: #050c1e;
+    padding: 50px 0;
+    div.footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding-bottom: 50px;
+        div.footer-top-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            div.footer-logo {
+                width: 150px;
+            }
+            p {
+                color: #7986a0;
+                font-size: 14px;
+            }
+        }
+        div.footer-top-right {
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 50px;
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    h5 {
+                        color: #fff;
+                        font-size: 15px;
+                        font-family: "Gordita Medium";
+                    }
+                    a {
+                        color: #7986a0;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    div.footer-bottom {
+        border-top: 1px solid #7986a0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        h5 {
+            color: #7986a0;
+            font-size: 14px;
+        }
+        div.footer-bottom-right {
+            display: flex;
+            gap: 20px;
+            a {
+                color: #7986a0;
+                font-size: 14px;
+            }
+        }
+    }
+}
